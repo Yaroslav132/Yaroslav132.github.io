@@ -4,5 +4,5 @@ $name = $_POST[name];
 $file = fopen("chat.html","a+");
 fputs($file,"<strong>$name</strong> <br/> $message <hr/> <br/>");
 fclose($file);
-header('location: index.html');
+header('location: indexx.html');
 ?>
