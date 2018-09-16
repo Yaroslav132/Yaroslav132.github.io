@@ -1,0 +1,13 @@
+#but1{
+	font-size:24px;
+	font-family:"Monotype Corsiva";
+	font-style:italic;
+	padding:5px;
+	margin-top:25px;
+	border:1px solid black;
+	background:#009ecc;
+	border-radius:5px;
+	box-shadow:0 0 4px #666;
+	color:#fff;
+	text-decoration:none;
+}
