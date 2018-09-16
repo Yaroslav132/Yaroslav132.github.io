@@ -1,0 +1,29 @@
+.t459{
+	background:magenta;
+	color:blue;
+	text-align:left;
+	vertical-align: bottom;
+}
+.t137{
+	background:yellow;
+	color:red;
+	text-align:right;
+	vertical-align: middle;
+	
+}
+.t6810{
+	background:blue;
+	color:cyan;
+	text-align: right;
+	vertical-align: bottom;
+}
+.t2{
+	background:grey;
+	font-size:14pt;
+	text-align:center;
+	vertical-align: middle;
+}
+table{
+		border-collapse: collapse;
+	}
+
