@@ -7,3 +7,16 @@
 	color:white; 
 	padding:20px;
 }
+
+#menu{
+	font-size:30px;
+	font-family:"Monotype Corsiva";
+	font-style:italic;
+	padding:10px;
+	border:2px solid black;
+	background:#009ecc;
+	border-radius:15px;
+	box-shadow:0 0 4px #666;
+	text-decoration:none;
+	vertical-align:-20pt;
+}
