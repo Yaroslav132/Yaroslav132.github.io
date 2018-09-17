@@ -2,12 +2,33 @@
 	font-size:24px;
 	font-family:"Monotype Corsiva";
 	font-style:italic;
-	padding:5px;
-	margin-top:25px;
-	border:1px solid black;
+	padding:10px;
+	border:2px solid black;
 	background:#009ecc;
-	border-radius:5px;
+	border-radius:15px;
 	box-shadow:0 0 4px #666;
+	text-shadow:0 0 4px #000;
 	color:#fff;
 	text-decoration:none;
+	vertical-align:-20pt;
+	//margin-right:10pt
+}
+
+table{
+	border-collapse:collapse;
+}
+td{
+	border:2px solid black;
+	font-family:"Monotype Corsiva";
+	font-size:24px;
+	text-align:center;
+	background:#bbf;
+	text-shadow:0 0 7px #fff;
+}
+body{
+	//background: url("1.jpg");
+	background: linear-gradient(#afa, white);
+}
+h1{
+	padding-top:30px;
 }
