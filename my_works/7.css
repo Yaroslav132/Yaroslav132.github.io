@@ -1,0 +1,55 @@
+body{
+	background: #408 url(StD.png) repeat-x 0px 150%;
+}
+.ottf{
+	margin-left:100px;
+	padding: 25px;
+	font-size:20px;
+	width: 450px;
+	
+	text-align: center;
+	background: rgb(245,115,107);
+	border-style:double ridge dotted groove;
+	border-width: 12px;
+	border-color: #0ff #af8 red #ff8;
+}
+.fsse{
+	margin-top:75px;
+	margin-left:300px;
+	padding: 15px;
+	font-size:25px;
+	width: 450px;
+	height: 130px;
+	text-align: justify;
+	background: rgb(5,175,180);
+	border-style:dashed double double dotted;
+	border-width: 10px 10px 10px 14px;
+	border-color: yellow;
+}
+.one{
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #048;
+}
+
+.two{
+	text-decoration: line-through;
+	color: #0f0;
+}
+.three{
+	font-style: italic;
+	color: white;
+}
+.four{
+	text-decoration: underline;
+	color: #a0f;
+}
+.five{
+	color: #805;
+}
+.six{
+	color: green;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-style: italic;
+	}

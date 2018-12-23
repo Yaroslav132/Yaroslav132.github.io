@@ -1,0 +1,23 @@
+table{
+	
+	border-style:double;
+}
+.right{
+	text-align: right;
+}
+.cour{
+	font-style:italic;
+}
+td{ border-collapse: collapse;}
+tr{
+	border-collapse: collapse;
+	border-style:dashed dotted;
+	border-color:black;
+	border-width:thin;
+}
+.grey{
+	background: grey;
+}
+.tb{
+	border-bottom-width:2px;
+}
