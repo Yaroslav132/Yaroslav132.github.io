@@ -3,8 +3,9 @@
 	font-size:130%;
 }
 .lol {
-	background-color:green;
+	background:url(plants.png);
 	color:white; 
+	font-size: 24px;
 	padding:20px;
 }
 
