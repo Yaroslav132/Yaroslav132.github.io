@@ -1,0 +1,17 @@
+body {
+  background-color:black;
+}
+#label{
+	text-align: center;
+	position: relative;
+	color:white;
+	z-index:2;
+	}
+#c {
+  opacity:.8;
+}
+canvas {
+  position:absolute;
+  top:0; left:0;
+  z-index:1;
+}
