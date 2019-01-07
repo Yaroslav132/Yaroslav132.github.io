@@ -1,3 +1,6 @@
+.body{
+	background: url(metal_blue.png);
+}
 #плов {
 	color:red;
 	font-size:130%;
@@ -22,4 +25,6 @@
 	vertical-align:-20pt;
 }
 .label{background: #aff;
-	}
+}
+
+
