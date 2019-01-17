@@ -2,31 +2,48 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Gamedev Canvas Workshop - lesson 1: create the Canvas and draw on it</title>
-    <style>* { padding: 0; margin: 0; } canvas { background: #eee; display: block; margin: 0 auto; }</style>
+    <title>My game mothafucker</title>
+    <style>* { padding: 0; margin: 0; } canvas { background: #aed; display: block; margin: 0 auto; }</style>
 </head>
 <body>
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
+<canvas id="myCanvas" width="960" height="640"></canvas>
 
 <script>
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
+	var ax = 160;
+	var ay = 100;
+	var vspeed = 1;
+	var hspeed = 2;
+	var acceleration=0.3;
+	
+
+	function draw_obj(){
     ctx.beginPath();
-    ctx.rect(20, 40, 50, 50);
-    ctx.fillStyle = "#FF0000";
-    ctx.fill();
-    ctx.closePath();
-    ctx.beginPath();
-    ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+    ctx.arc(ax, ay, 20, 0, Math.PI*2, false);
     ctx.fillStyle = "green";
     ctx.fill();
     ctx.closePath();
-    ctx.beginPath();
-    ctx.rect(160, 10, 100, 40);
-    ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
-    ctx.stroke();
-    ctx.closePath();
+	}
+	
+	function draw(){
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+    draw_obj();
+	ay+=vspeed;
+	ax+=hspeed;
+	vspeed+=acceleration;
+	requestAnimationFrame(draw);
+	if (ay>canvas.height-10){vspeed=-15;}
+	else if (ax<10){hspeed=2}
+	else if (ax>canvas.width-10){hspeed=-2}
+	}
+	draw();
+	
+	
+	document.onclick = function() {
+    vspeed=-10;}
+   
 </script>
 
 </body>
