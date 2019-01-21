@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>My game mothafucker</title>
+    <style>* { padding: 0; margin: 0; } canvas { background: #aed; display: block; margin: 0 auto; }</style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="640" height="480"></canvas>
+
+<script>
+	var obj = new Image();
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+	var ax = 160;
+	var ay = 100;
+	var vspeed = 1;
+	var hspeed = 2;
+	var acceleration=0.3;
+	
+	obj.src="war.png"
+	
+
+	function draw_obj(){
+	ctx.drawImage(obj,ax,ay);
+	
+    //ctx.beginPath();
+    //ctx.arc(ax, ay, 20, 0, Math.PI*2, false);
+    //ctx.fillStyle = "green";
+    //ctx.fill();
+    //ctx.closePath();
+	}
+	
+	function draw(){
+	requestAnimationFrame(draw);
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+    draw_obj();
+	ay+=vspeed;
+	vspeed+=acceleration;
+	//if (keysDown=39) {ax+=5;}
+	if (ay>canvas.height-10){vspeed=-15;}
+	//else if (ax<10){hspeed=2}
+	//else if (ax>canvas.width-10){hspeed=-2}
+	}
+	draw();
+	
+	
+	document.onclick = function() {
+    vspeed=-10;}
+   	document.onkeypress = function(event){if (event.keyCode=39){ax+=10}}
+</script>
+
+</body>
+</html>
