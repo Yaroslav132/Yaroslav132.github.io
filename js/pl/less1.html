@@ -11,25 +11,52 @@
 
 <script>
 	var obj = new Image();
+	var wall = new Image();
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
 	var ax = 160;
 	var ay = 100;
+	var bx = 160;
+	var by = 350;
 	var vspeed = 1;
 	var hspeed = 2;
-	var acceleration=0.3;
-	
+	var acceleration=0.7;
 	obj.src="war.png"
+	wall.src="wall.png"
+	jump =0;
 	
-
+///////////////////////////////////////////////////////////////////////////////////
+	var rP=false;																///
+	var lP=false;																///
+																				///
+	document.addEventListener("keydown",keyDownHandler,false);					///
+	document.addEventListener("keyup",keyUpHandler,false);						///
+																				///
+	function keyDownHandler(e){													///
+		if(e.key=="Right"||e.key=="ArrowRight"){								///
+			rP=true;															///
+		}
+		else if(e.key=="Left"||e.key=="ArrowLeft"){
+			lP=true;
+		}
+		else if(e.key=="Up"||e.key=="ArrowUp"){if(jump==0){
+			vspeed-=15;
+			jump=1;
+	}}
+	}
+	
+	function keyUpHandler(e) {
+		if(e.key == "Right" || e.key == "ArrowRight") {
+			rP = false;
+		}
+		else if(e.key == "Left" || e.key == "ArrowLeft") {
+			lP = false;
+		}
+	}
+///////////////////////////////////////////////////////////////////////////////	
 	function draw_obj(){
 	ctx.drawImage(obj,ax,ay);
-	
-    //ctx.beginPath();
-    //ctx.arc(ax, ay, 20, 0, Math.PI*2, false);
-    //ctx.fillStyle = "green";
-    //ctx.fill();
-    //ctx.closePath();
+	ctx.drawImage(wall,bx,by);
 	}
 	
 	function draw(){
@@ -38,17 +65,28 @@
     draw_obj();
 	ay+=vspeed;
 	vspeed+=acceleration;
-	//if (keysDown=39) {ax+=5;}
-	if (ay>canvas.height-10){vspeed=-15;}
-	//else if (ax<10){hspeed=2}
-	//else if (ax>canvas.width-10){hspeed=-2}
+	if (ay>canvas.height-obj.height || ay>by-obj.height && ay<by-obj.height+2 && ax+obj.width>bx && ax<bx+wall.width){
+		//ay=canvas.height-obj.height;
+		vspeed=0; 
+		jump=0;
+		}
+	//if (ay>by-obj.height && ax+obj.width>bx && ax<bx+wall.width){
+		//ay=canvas.height-obj.height;
+	//	vspeed=0; 
+	//	jump=0;
+//	}
+		
+		
+	if(rP) {
+    ax += 7;
 	}
+	else if(lP) {
+    ax -= 7;
+	}
+	}
+	
 	draw();
 	
-	
-	document.onclick = function() {
-    vspeed=-10;}
-   	document.onkeypress = function(event){if (event.keyCode=39){ax+=10}}
 </script>
 
 </body>
