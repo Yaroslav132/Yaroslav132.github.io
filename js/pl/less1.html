@@ -65,7 +65,7 @@
     draw_obj();
 	ay+=vspeed;
 	vspeed+=acceleration;
-	if (ay>canvas.height-obj.height || ay>by-obj.height && ay<by-obj.height+2 && ax+obj.width>bx && ax<bx+wall.width){
+	if (ay>canvas.height-obj.height-vspeed || ay>by-obj.height-vspeed && ay<by  && ax+obj.width>bx && ax<bx+wall.width && vspeed>=0){
 		//ay=canvas.height-obj.height;
 		vspeed=0; 
 		jump=0;
