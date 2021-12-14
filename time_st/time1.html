@@ -5,7 +5,7 @@
 	</head>
 	<body background="1.jpg">
 
-	<table border="5" align="center">
+	<table border="5" >
 		<tr>
 			<td><a href="https://zoom.us/j/4659234044?pwd=RS93VHZRaXFjMUZXMThndXN1K1plQT09"target="index">Думнова Э.М.</a></td>
 			<td>Проблемы современного общества </td>
@@ -35,6 +35,86 @@
 			<td>Информационные системы электронного бизнеса</td>
 		</tr>
 	</table>
+
+
+	<audio src="padoru.mp3" autoplay>padoru.mp3</audio>
+	<canvas id="myCanvas" width="500" height="500"></canvas>
+
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+	//var obj = new Image();
+	var ax = 160;
+	var ay = 100;
+	var vspeed = 1;
+	var hspeed = 3;
+	var acceleration=0.3;
+	//obj.src="padoru.png";
+	var alarm=10;
+	
+////////////////////////////////////////////////////////////
+var obj = {
+    'srrc': null,
+    'current': 0,
+    'total_frames': 4,
+    'width': 128,
+    'height': 128
+};
+
+var img = new Image();
+img.src = "padoru.png"
+
+obj.src = img; // contains an image of size 256x16
+                              // with 16 frames of size 16x16
+
+	function draw_obj(){
+
+                   
+
+
+
+    ctx.beginPath();
+	//ctx.drawImage(obj.src,ax,ay);
+
+
+	ctx.drawImage(obj.src, obj.current * obj.width, 0,
+                          obj.width, obj.height,
+                          ax, ay, obj.width, obj.height);
+
+	
+	if (alarm==0){
+		obj.current = (obj.current + 1) % obj.total_frames;
+		alarm=10;
+	}
+	
+	else {alarm-=1}
+
+
+    //ctx.arc(ax, ay, 20, 0, Math.PI*2, false);
+    ctx.fillStyle = "green";
+    ctx.fill();
+    ctx.closePath();
+	}
+	
+	function draw(){
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	
+    draw_obj();
+	ay+=vspeed;
+	ax+=hspeed;
+	vspeed+=acceleration;
+	requestAnimationFrame(draw);
+	if (ay>canvas.height-120){vspeed=-15;}
+	else if (ax<-10){hspeed=3}
+	else if (ax>canvas.width-120){hspeed=-3}
+	}
+	draw();
+	
+	
+	document.onclick = function() {
+    vspeed=-10;}
+   
+</script>
 			
 	</body>
 </html>

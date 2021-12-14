@@ -2,6 +2,8 @@
 table{
 	border-collapse:collapse;
 	background: url("ll.jpg");
+	margin-left: auto;
+	margin-right: auto;
 }
 td{
 	border:5px solid rgb(124, 102, 6);
