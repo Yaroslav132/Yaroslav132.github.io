@@ -1,0 +1,19 @@
+
+table{
+	border-collapse:collapse;
+}
+td{
+	border:2px solid black;
+	font-family:"Monotype Corsiva";
+	font-size:24px;
+	text-align:center;
+	background:#bbf;
+	text-shadow:0 0 7px #fff;
+}
+body{
+	//background: url("1.jpg");
+	background: linear-gradient(#afa, white);
+}
+h1{
+	padding-top:30px;
+}
