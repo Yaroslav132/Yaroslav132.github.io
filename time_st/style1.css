@@ -1,18 +1,20 @@
 
 table{
 	border-collapse:collapse;
+	background: url("ll.jpg");
 }
 td{
-	border:2px solid black;
+	border:5px solid rgb(124, 102, 6);
 	font-family:"Monotype Corsiva";
 	font-size:24px;
+	font-weight: bold;
 	text-align:center;
-	background:#bbf;
-	text-shadow:0 0 7px #fff;
+	//background:rgb(202, 202, 248);
+	//text-shadow:0 0 7px #fff;
 }
 body{
-	//background: url("1.jpg");
-	background: linear-gradient(#afa, white);
+	background: url("1.jpg");
+	//background: linear-gradient(#00f, white);
 }
 h1{
 	padding-top:30px;
