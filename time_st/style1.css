@@ -1,3 +1,12 @@
+canvas{
+	display: inline;
+	//position: absolute;
+}
+a{
+	text-decoration: none;
+	color: rgb(27, 27, 204);
+	font-size: 24px;
+}
 
 table{
 	border-collapse:collapse;
@@ -11,13 +20,40 @@ td{
 	font-size:24px;
 	font-weight: bold;
 	text-align:center;
-	//background:rgb(202, 202, 248);
-	//text-shadow:0 0 7px #fff;
 }
 body{
 	background: url("1.jpg");
-	//background: linear-gradient(#00f, white);
 }
 h1{
 	padding-top:30px;
 }
+
+
+////////////////////////////////////////////
+
+ul{
+	list-style: none;
+	display: inline;
+}
+li{
+	background:linear-gradient(to left,#eee4ae 10%,#bdef2f 90%);
+	width:285px;
+	height: ;
+	border: white solid 2px;
+	margin-bottom: 2px;
+	border-radius: 15px;
+	text-align: center;
+}
+li:hover{
+	background:linear-gradient(90deg,#00be78 10%,#eee4ae 80%);
+	
+}
+li>ul{
+	position: absolute;
+	//margin-left: -30px;
+	visibility: hidden;
+}
+.refers{	position:absolute;
+}
+li:hover ul{visibility: visible}
+
