@@ -7,40 +7,42 @@
 
 	<table border="5" >
 		<tr>
-			<td><a href="https://zoom.us/j/4659234044?pwd=RS93VHZRaXFjMUZXMThndXN1K1plQT09"target="index">Думнова Эльнара Михайловна</a></td>
-			<td>Проблемы современного общества </td>
-		</tr>
-		<tr>
-			<td><a href="https://zoom.us/j/7388094522?pwd=WTFVVzZLNHRXY0ZreU9SQ0JFdzcrZz09" target="index">Гальчук Лариса Михайловна</a></td>
-			<td>Деловой Иностранный язык</td>
+			<td>Ссылка на zoom</td>
+			<td>Название предмета</td>
+			<td>Канал связи</td>
 		</tr>
 		<tr>
 			<td><a href="https://zoom.us/j/9743566396?pwd=dUw4aWgwMFArYnlRV1o2WkVLQ3JCdz09" target="index">Гурова Елена Геннадьевна</a></td>
-			<td>Проектирование и разработка электронного бизнеса</td>
+			<td>Методология проектного управления</td>
+			<td>lena319@mail.ru</td>
+		</tr>
+		<tr>
+			<td><a href="https://zoom.us/j/9743566396?pwd=dUw4aWgwMFArYnlRV1o2WkVLQ3JCdz09" target="index">Пестунов А.И.</a></td>
+			<td>Информационная безопасность систем эл.коммерци; <p>Технологическая (проект-техн.)практ</p></td>
+			<td>Сообщите администратору</td>
 		</tr>
 		<tr>
 			<td><a href="https://zoom.us/j/99424632331?pwd=a3RWNVhYUit3UVdqRWkyamE5cTBvQT09" target="index">Кричевский Александр Игнатьевич</a></td>
 			<td>Системная инженерия</td>
+			<td>a.i.krichevskij@edu.nsuem.ru</td>
 		</tr>
 		<tr>
 			<td><a href="https://zoom.us/j/77423978024?pwd=U0lJS1RPeFB2NFRZMUEwVVpLYStzQT09" target="index">Осипов Александр Леонидович</a></td>
-			<td>Технологии интеллектуального анализа данных</td>
-		</tr>
-		<tr>
-			<td><a href="https://zoom.us/j/7502344562?pwd=SEg4TjV2Z2NUWVRtOU42S0UwNWlJQT09" target="index">Осипов Федор Леонидович</a></td>
-			<td>Методы исследования и моделирования ИП и технологий</td>
+			<td>Многоагентные системы</td>
+			<td>alosip@mail.ru</td>
 		</tr>
 		<tr>
 			<td><a href="https://zoom.us/j/81964757167?pwd=bkZ4VWhwdWdWSkd0UGFHRG9rbm1kUT09" target="index">Терещенко Сергей Николаевич</a></td>
-			<td>Информационные системы электронного бизнеса</td>
+			<td>Проект и разр систем электр бизнеса</td>
+			<td><a href="https://vk.com/id399252108">Страничка ВК</a></td>
 		</tr>
 		<tr>
 			<td><a href="https://vk.com/club206977488" target="index">мТЭБ101</a></td>
-			<td>Наша группа ВК</td>
+			<td colspan=2>Наша группа ВК</td>
 		</tr>
 		<tr>
-			<td><audio controls src="padoru.mp3"></audio></td>
-			<td>С НАСТУПАЮЩИМ!!!</td>
+			<td><audio controls src="Ykr.mp3"></audio></td>
+			<td colspan=2>Слава Украинi</td>
 		</tr>
 	</table>
 
@@ -78,13 +80,13 @@
 var obj = {
     'srrc': null,
     'current': 0,
-    'total_frames': 4,
-    'width': 128,
-    'height': 128
+    'total_frames': 10,
+    'width': 200,
+    'height': 165
 };
 
 var img = new Image();
-img.src = "padoru.png"
+img.src = "Ykr.png"
 
 obj.src = img; // contains an image of size 256x16
                               // with 16 frames of size 16x16
@@ -106,7 +108,7 @@ obj.src = img; // contains an image of size 256x16
 	
 	if (alarm==0){
 		obj.current = (obj.current + 1) % obj.total_frames;
-		alarm=10;
+		alarm=5;
 	}
 	
 	else {alarm-=1}
@@ -128,7 +130,7 @@ obj.src = img; // contains an image of size 256x16
 	requestAnimationFrame(draw);
 	if (ay>canvas.height-120){vspeed=-15;}
 	else if (ax<-10){hspeed=3}
-	else if (ax>canvas.width-120){hspeed=-3}
+	else if (ax>canvas.width-200){hspeed=-3}
 	}
 	draw();
 	
