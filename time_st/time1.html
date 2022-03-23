@@ -36,8 +36,8 @@
 			<td colspan=2>Наша группа ВК</td>
 		</tr>
 		<tr>
-			<td><audio controls src="Ykr.mp3"></audio></td>
-			<td colspan=2>Слава Украинi</td>
+			<td><audio controls src="Newmus.wav"></audio></td>
+			<td colspan=2>Хз что сказать.... Придумаю, напишу</td>
 		</tr>
 	</table>
 
@@ -75,13 +75,13 @@
 var obj = {
     'srrc': null,
     'current': 0,
-    'total_frames': 10,
-    'width': 200,
-    'height': 165
+    'total_frames': 2,
+    'width': 16,
+    'height': 16
 };
 
 var img = new Image();
-img.src = "Ykr.png"
+img.src = "sprite2_strip2.png"
 
 obj.src = img; // contains an image of size 256x16
                               // with 16 frames of size 16x16
@@ -98,13 +98,20 @@ obj.src = img; // contains an image of size 256x16
 
 	ctx.drawImage(obj.src, obj.current * obj.width, 0,
                           obj.width, obj.height,
-                          ax, ay, obj.width, obj.height);
+                          ax, ay, obj.width*4, obj.height*4);
 
-	
-	if (alarm==0){
-		obj.current = (obj.current + 1) % obj.total_frames;
-		alarm=5;
+	if (vspeed<0){
+		obj.current = 0;
 	}
+	if (vspeed>0){
+		obj.current = 1;
+	}
+	//else {obj.current = 1;}
+	
+	//if (alarm==0){
+	//	obj.current = (obj.current + 1) % obj.total_frames;
+	//	alarm=5;
+	//}
 	
 	else {alarm-=1}
 
