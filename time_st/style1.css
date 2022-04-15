@@ -1,3 +1,10 @@
+#demo{
+	text-decoration: none;
+	color: rgb(243, 243, 243);
+	font-size: 24px;
+	text-align: center;
+}
+
 canvas{
 	display: inline;
 	//position: absolute;

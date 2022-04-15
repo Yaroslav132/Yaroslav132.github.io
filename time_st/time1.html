@@ -2,8 +2,33 @@
 	<head>
 		<title>мТЭБ101 полезная инфа</title>
 		<link rel="stylesheet" href="style1.css" />
+
+		<!-- Это код Кати для рассчета недели -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript">
+
+		function week(){
+			currentdate = new Date();
+			var oneJan = new Date(currentdate.getFullYear(),0,1);
+			var numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
+			var result = Math.ceil(( currentdate.getDay() + 1 + numberOfDays) / 7);
+			var weekNumber=(result-1)%2;
+
+		if (weekNumber=1){
+			document.getElementById("demo").innerHTML="Сейчас ПЕРВАЯ неделя";
+		}
+		else{
+			document.getElementById("demo").innerHTML="Сейчас ВТОРАЯ неделя";
+		};
+		}
+		</script>
+		
 	</head>
-	<body background="1.jpg">
+	<body onload="week()" background="1.jpg">
+	<p id="demo"></p>
+	<!-- Это код Кати для рассчета недели -->
+
+
 
 	<table border="5" >
 		<tr>
