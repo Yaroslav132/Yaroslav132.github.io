@@ -1,6 +1,7 @@
 #demo{
 	text-decoration: none;
 	color: rgb(243, 243, 243);
+	text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 	font-size: 24px;
 	text-align: center;
 }
@@ -16,8 +17,9 @@ a{
 }
 
 table{
+	width: 100%;
 	border-collapse:collapse;
-	background: url("ll.jpg");
+	background: url("ll.png");
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -25,11 +27,17 @@ td{
 	border:5px solid rgb(124, 102, 6);
 	font-family:"Monotype Corsiva";
 	font-size:24px;
+	text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+	
 	font-weight: bold;
 	text-align:center;
 }
 body{
-	background: url("1.jpg");
+	background: url("1.png");
+	font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #f5f5f5;
 }
 h1{
 	padding-top:30px;
@@ -64,3 +72,31 @@ li>ul{
 }
 li:hover ul{visibility: visible}
 
+.zoom-button {
+	font-family:"Monotype Corsiva";
+	width: 90%;
+	padding: 10px;
+	background: #8c9468;
+	color: rgb(56, 54, 54);
+	border: none;
+	border-radius: 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size:24px;
+	font-weight: bold;
+	margin: 4px 2px;
+	cursor: pointer;
+	text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+.zoom-button:hover {
+	background-color: #3c8dbc;
+	}
+
+#myCanvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	pointer-events: none;
+}

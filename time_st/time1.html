@@ -13,12 +13,7 @@
 			var numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
 			var result = parseInt(numberOfDays / 7)+1;
 			var weekNumber=result%2;
-			/*console.log(weekNumber);
-			console.log(result);
-			console.log(oneJan);
-			console.log(numberOfDays);
-			console.log(currentdate);
-			console.log(currentdate.getDay());*/
+			
 
 			if (weekNumber==1){
 				document.getElementById("demo").innerHTML="Сейчас ПЕРВАЯ неделя";
@@ -36,81 +31,54 @@
 
 
 
-	<table border="5" >
+	<table border="5">
 		<tr>
 			<td>Ссылка на zoom</td>
 			<td>Название предмета</td>
 			<td>Канал связи</td>
-			<!-- <td>Дни занятий (1 неделя)</td>
-			<td>Дни занятий (2 неделя)</td> -->
 		</tr>
 		<tr>
-			<td rowspan ><a href="https://us04web.zoom.us/j/3010451906?pwd=c20zYmUxdnNTQmtIZE94dGo1akVzdz09" target="index">Щеглов Юрий Александрович</a></td>
+			<td><button class="zoom-button" onclick="window.open('https://us04web.zoom.us/j/3010451906?pwd=c20zYmUxdnNTQmtIZE94dGo1akVzdz09', '_blank')">Щеглов Юрий Александрович</button></td>
 			<td>Оптимизация проектов для поиск.сист</td>
-			<td rowspan >nsuem.2@mail.ru</td>
+			<td rowspan>nsuem.2@mail.ru</td>
 
 		</tr>
 
 		<tr>
-			<td><a href="https://us02web.zoom.us/j/6617202154?pwd=d0VjbDFnQzN0ZVJNRlh0WEUxNExTUT09" target="index">Пестунов Андрей Игоревич</a></td>
+			<td><button class="zoom-button" onclick="window.open('https://us02web.zoom.us/j/6617202154?pwd=d0VjbDFnQzN0ZVJNRlh0WEUxNExTUT09', '_blank')">Пестунов Андрей Игоревич</button></td>
 			<td>Научно-исследовательская работа</td>
 			<td>a.i.pestunov@nsuem.ru</td>
 		</tr>
 		<tr>
-			<td><a href="https://zoom.us/j/81964757167?pwd=bkZ4VWhwdWdWSkd0UGFHRG9rbm1kUT09" target="index">Терещенко Сергей Николаевич</a></td>
+			<td><button class="zoom-button" onclick="window.open('https://zoom.us/j/81964757167?pwd=bkZ4VWhwdWdWSkd0UGFHRG9rbm1kUT09', '_blank')">Терещенко Сергей Николаевич</button></td>
 			<td>Разработка прилож. под моб.платформ</td>
-			<td colspan=2><a href="https://vk.com/id399252108" target="index">VK</a><a >  или Sg12@ngs.ru</a></td>
+			<td colspan=2><a href="https://vk.com/id399252108" target="index">VK</a><a> или Sg12@ngs.ru</a></td>
 		</tr>
 		<tr>
-			<td><a href="https://us04web.zoom.us/j/5292131658?pwd=Q005VlVVT3pFdHQ3b3h6blhNVk1hZz09" target="index">Куницын Дмитрий Валерьевич</a></td>
+			<td><button class="zoom-button" onclick="window.open('https://us04web.zoom.us/j/5292131658?pwd=Q005VlVVT3pFdHQ3b3h6blhNVk1hZz09', '_blank')">Куницын Дмитрий Валерьевич</button></td>
 			<td>Научно-исследовательский семинар</td>
 			<td>d.v.kunicyn@nsuem.ru</td>
 		</tr>
 		<tr>
-			<td><a href="https://zoom.us/j/77423978024?pwd=U0lJS1RPeFB2NFRZMUEwVVpLYStzQT09" target="index">Рапоцевич Е.А.(Осипов А.Л)</a></td>
+			<td><button class="zoom-button" onclick="window.open('https://zoom.us/j/77423978024?pwd=U0lJS1RPeFB2NFRZMUEwVVpLYStzQT09', '_blank')">Рапоцевич Е.А.(Осипов А.Л)</button></td>
 			<td>Управление электронным предприятием</td>
 			<td>alosip@mail.ru</td>
 		</tr>
 		<tr>
-			<td><a href="https://us05web.zoom.us/j/2895509619?pwd=YWdURUVqMU44Wk91Y3J0TWJYQ3M5dz09" target="index">Безродная Людмила Владимировна</a></td>
+			<td><button class="zoom-button" onclick="window.open('https://us05web.zoom.us/j/2895509619?pwd=YWdURUVqMU44Wk91Y3J0TWJYQ3M5dz09')">Безродная Людмила Владимировна</a></td>
 			<td>Маркетинг инф продукт и услуг</td>
-			<td><a href="https://drive.google.com/drive/folders/130TxZONNz6dpzClXGQ_ATKOH2CsWdlpL" >Google Drive</a></td>
+			<td><button class="zoom-button" onclick="window.open('https://drive.google.com/drive/folders/130TxZONNz6dpzClXGQ_ATKOH2CsWdlpL')" >Google Drive</a></td>
 		</tr>
 		<tr>
-			<td><a href="https://us04web.zoom.us/j/8439453717?pwd=cExKK3VTN0tCaTZ6M0ZXTUJWRFRTZz09" target="index">Соболева Ирина Анатольевна</a></td>
+			<td><button class="zoom-button" onclick="window.open('https://us04web.zoom.us/j/8439453717?pwd=cExKK3VTN0tCaTZ6M0ZXTUJWRFRTZz09')">Соболева Ирина Анатольевна</a></td>
 			<td>Корпоративные информац. системы</td>
 			<td>+79139020267</td>
 		</tr>
-		<!-- <tr>
-			<td><a href="https://us04web.zoom.us/j/2859140548?pwd=aE41T2YvdlU2Z09MUDl6RnhYS2ZMUT09" target="index">Павлова Анна Илларионовна</a></td>
-			<td>Нейронечёткие системы и технологии</td>
-			<td>annstab@mail.ru</td>
-		</tr>
-		<tr>
-			<td><a href="https://us04web.zoom.us/j/7922982846?pwd=WTg0SWc3aU5oTkcySG81L2dOeHQ5QT09" target="index">Дубнищева Татьяна Яковлевна</a></td>
-			<td>Нестандартные решения тех-их задач</td>
-			<td>dubnistcheva@mail.ru</td>
-		</tr>
-		<tr>
-			<td><a href="https://vk.com/away.php?to=https%3A%2F%2Fus04web.zoom.us%2Fj%2F7465852304%3Fpwd%3DazJSUU9sbXVZdUlyVkRRL0xwK0l6UT09" target="index">Пургина Марина Владимировна</a></td>
-			<td>Инфографика и визуализ.данных</td>
-			<td>Pur-11@yandex.ru</td>
-		</tr> -->
-			<td><a href="https://vk.com/club206977488" target="index">мТЭБ101</a></td>
+			<td><button class="zoom-button" onclick="window.open('https://vk.com/club206977488')">мТЭБ101</a></td>
 			<td colspan=2>Наша группа ВК</td>
 		</tr>
-		<!-- <tr>
-			<td colspan=3><a href="https://docs.google.com/document/d/1hj9-WZ0WsPZ2iZUf-KExn1LMBaC0UIAAYtW5ohk2zfg/edit" target="index">Список вопросов для подготовки к экзамену по дисциплине НРТЗ
-			</a></td>
-		</tr> -->
-		<!-- <tr>
-			<td colspan=3><a href="Raspisanie_Mteb101.pdf" target="index">Расписание мТЭБ101 (от Кати)</a></td>
-		</tr>
-		<tr>
-			<td colspan=3><a href="mTEB101.pdf" target="index">Расписание мТЭБ101 (от меня)</a></td>
-		</tr> -->
 	    <tr>
-			<td colspan=3><a href="https://rasps.nsuem.ru/group/мТЭБ101" target="index">Расписание на сайте НГУЭУ</a></td>
+			<td colspan=3><button class="zoom-button" onclick="window.open('https://rasps.nsuem.ru/group/мТЭБ101')">Расписание на сайте НГУЭУ</a></td>
 		</tr>
 		<tr>
 			<td><audio controls src="видно.mp3"></audio></td>
@@ -126,6 +94,9 @@
 <script >
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 	//var obj = new Image();
 	var ax = 160;
 	var ay = 100;
@@ -151,39 +122,23 @@ obj.src = img; // contains an image of size 256x16
                               // with 16 frames of size 16x16
 
 	function draw_obj(){
-
-                   
-
-
-
-    ctx.beginPath();
-	//ctx.drawImage(obj.src,ax,ay);
-
-
-	ctx.drawImage(obj.src, obj.current * obj.width, 0,
+    	ctx.beginPath();
+		ctx.drawImage(obj.src, obj.current * obj.width, 0,
                           obj.width, obj.height,
                           ax, ay, obj.width*4, obj.height*4);
 
-	if (vspeed<0){
-		obj.current = 0;
-	}
-	if (vspeed>0){
-		obj.current = 1;
-	}
-	//else {obj.current = 1;}
-	
-	//if (alarm==0){
-	//	obj.current = (obj.current + 1) % obj.total_frames;
-	//	alarm=5;
-	//}
-	
-	else {alarm-=1}
+		if (vspeed<0){
+			obj.current = 0;
+		}
+		if (vspeed>0){
+			obj.current = 1;
+		}
+		
+		else {alarm-=1}
 
-
-    //ctx.arc(ax, ay, 20, 0, Math.PI*2, false);
-    ctx.fillStyle = "green";
-    ctx.fill();
-    ctx.closePath();
+	    ctx.fillStyle = "green";
+	    ctx.fill();
+	    ctx.closePath();
 	}
 	
 	function draw(){
@@ -201,13 +156,7 @@ obj.src = img; // contains an image of size 256x16
 	draw();
 	
 	
-	document.onclick = function() {
-    vspeed=-10;}
+	//document.onclick = function() {
+    //vspeed=-10;}
    
 </script>
-
-
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/hqDOUFIffKA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			
-	</body>
-</html> -->
